@@ -16,7 +16,7 @@ namespace UP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new adminLogins());
+            Application.Run(new Form1());
         }
     }
 }

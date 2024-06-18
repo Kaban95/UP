@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MessagingToolkit.QRCode.Codec;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,8 +51,8 @@ namespace UP
                 MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Buy buy = new Buy();
                 this.Hide();
-                buy.ShowDialog();
-                this.Show();
+                buy.Show();
+                
             }
             else
               MessageBox.Show("Такого аккаунта не существует","Аккаунта не существует",MessageBoxButtons.OK,MessageBoxIcon.Warning);
@@ -91,5 +92,13 @@ namespace UP
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 frm4 = new Form4();   
+            frm4.Show();
+            this.Hide();
+        }
     }
-}
+    }
+

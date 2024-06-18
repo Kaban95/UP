@@ -52,5 +52,23 @@ namespace UP
         {
             textBox2.UseSystemPasswordChar = true;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Size = new Size (230, 230);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+            frm1.Show();
+            this.Hide();
+            MessageBox.Show("Вы успешно вернулись назад!", "Назад", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

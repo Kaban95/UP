@@ -23,7 +23,7 @@ namespace UP
 
         private void Buy_Load(object sender, EventArgs e) 
         {
-            _adapter = new SqlDataAdapter("SELECT * FROM books", _data.GetConnection()); 
+            _adapter = new SqlDataAdapter("select name_book as'Название',price as 'Цена',discount as 'Материал',opisanie as 'Описание',proizvoditel as 'Произвоитель' from books", _data.GetConnection()); 
 
             _adapter.Fill(_table); 
             dataGridView1.DataSource = _table; 
@@ -53,10 +53,10 @@ namespace UP
         private void добавитьВКорзинуToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             DataGridViewRow row = dataGridView1.Rows[_selectedRow];
-            nameTovar.Items.Add(row.Cells[1].Value.ToString()); 
+            nameTovar.Items.Add(row.Cells[0].Value.ToString()); 
 
             int sum;
-            int priceLastTovar = Convert.ToInt32(row.Cells[3].Value); 
+            int priceLastTovar = Convert.ToInt32(row.Cells[1].Value); 
             sum =+ priceLastTovar;
             textBox1.Text = sum.ToString();
      
@@ -65,12 +65,12 @@ namespace UP
         private void информацияОТовареToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             DataGridViewRow row = dataGridView1.Rows[_selectedRow];
-            if (infoTovar.Items.Count == 1){
+            if (infoTovar.Items.Count == 5){
                 infoTovar.Clear();
-                infoTovar.Items.Add(row.Cells[5].Value.ToString());
+                infoTovar.Items.Add(row.Cells[1].Value.ToString());
             }
             else
-                infoTovar.Items.Add(row.Cells[5].Value.ToString());
+                infoTovar.Items.Add(row.Cells[3].Value.ToString());
 
         }
 
@@ -107,5 +107,29 @@ namespace UP
             this.Hide();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void infoTovar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

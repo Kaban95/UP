@@ -69,5 +69,23 @@ namespace UP
                 label7.Text = "Вы не человек";
             database.CloseConnection();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
+            MessageBox.Show("Вы успешно вернулись назад!", "Назад", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

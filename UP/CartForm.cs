@@ -27,7 +27,7 @@ namespace UP
 
         private void textBox1_TextChanged(object sender, EventArgs e) // текст бокс номер карты
         {
-            if (textBox1.Text.Length > 19){
+            if (textBox1.Text.Length > 16){
                 label3.Text = "Ошибка";
                 b1.Enabled = false;  }
             else {
@@ -58,7 +58,7 @@ namespace UP
 
         private void textBox2_TextChanged(object sender, EventArgs e) //текст бокс CVC кода
         {
-            if (textBox2.Text.Length > 4) {
+            if (textBox2.Text.Length > 3) {
                 label6.Text = "Ошибка";
                 b1.Enabled = false; }
             else {
@@ -77,6 +77,21 @@ namespace UP
         }
 
         private void adress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CartForm_Load(object sender, EventArgs e)
         {
 
         }

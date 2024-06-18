@@ -50,5 +50,10 @@ namespace UP
         {
 
         }
+
+        private void textBox_discount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

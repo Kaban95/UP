@@ -19,17 +19,17 @@ namespace UP
 
 
 
-        private void buttonAddBalance_Click(object sender, EventArgs e) // Пополнение баланса
-        {
-            int balance = Convert.ToInt32(labelBalance.Text);
+        //private void buttonAddBalance_Click(object sender, EventArgs e) // Пополнение баланса
+        //{
+        //    int balance = Convert.ToInt32(labelBalance.Text);
 
-            balance += Convert.ToInt32(textBoxAddBalance.Text);
+        //    balance += Convert.ToInt32(textBoxAddBalance.Text);
 
-            labelBalance.Text = balance.ToString();
-            textBoxAddBalance.Clear();
+        //    labelBalance.Text = balance.ToString();
+        //    textBoxAddBalance.Clear();
 
-            String connection = "Database=boop;ACER\\SQLEXPRESS;User Id=Kira;Password=" + labelBalance.Text; // сдесь мейби неправильно если что выебываеться смотри сюда !
-        }
+        //    String connection = "Database=boop;ACER\\SQLEXPRESS;User Id=Kira;Password=" + labelBalance.Text; // сдесь мейби неправильно если что выебываеться смотри сюда !
+        //}
    
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -59,6 +59,11 @@ namespace UP
 
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonWasted_Click(object sender, EventArgs e)
         {
 
         }
